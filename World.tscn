@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GroundTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://TileMap.gd" type="Script" id=2]
+[ext_resource path="res://Draw.gd" type="Script" id=3]
+[ext_resource path="res://Unit.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+script = ExtResource( 2 )
+
+[node name="Draw" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 1, 0.987 )
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 119.96, 61.601 )

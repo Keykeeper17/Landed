@@ -1,0 +1,74 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Art/grass.png" type="Texture" id=1]
+[ext_resource path="res://Art/Rock.png" type="Texture" id=2]
+[ext_resource path="res://Art/WBL.png" type="Texture" id=3]
+[ext_resource path="res://Art/WBM.png" type="Texture" id=4]
+[ext_resource path="res://Art/WBR.png" type="Texture" id=5]
+[ext_resource path="res://Art/WML.png" type="Texture" id=6]
+[ext_resource path="res://Art/WMR.png" type="Texture" id=7]
+[ext_resource path="res://Art/WTL.png" type="Texture" id=8]
+[ext_resource path="res://Art/WTM.png" type="Texture" id=9]
+[ext_resource path="res://Art/WTR.png" type="Texture" id=10]
+[ext_resource path="res://Art/Nothing.png" type="Texture" id=11]
+[ext_resource path="res://Art/Tree1.png" type="Texture" id=12]
+[ext_resource path="res://Art/Tree2.png" type="Texture" id=13]
+[ext_resource path="res://Art/Tree3.png" type="Texture" id=14]
+
+[node name="Node" type="Node"]
+
+[node name="grass" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Rock" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="WBL" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="WBM" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="WBR" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="WML" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="WMR" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+centered = false
+
+[node name="WTL" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="WTM" type="Sprite" parent="."]
+texture = ExtResource( 9 )
+centered = false
+
+[node name="WTR" type="Sprite" parent="."]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Nothing" type="Sprite" parent="."]
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Tree1" type="Sprite" parent="."]
+texture = ExtResource( 12 )
+centered = false
+
+[node name="Tree2" type="Sprite" parent="."]
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Tree3" type="Sprite" parent="."]
+texture = ExtResource( 14 )
+centered = false
