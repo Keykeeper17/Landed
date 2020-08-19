@@ -3,7 +3,7 @@ This game is created with the game development group Spectron for [Miz Jam 1](ht
 <!-- Github uses Markdown and to add spaces use double space or <br /> , this is also an example of comments-->
 
 **Objective**:  
-Use the provided art assets to create an engaging and interesting game. 
+Use the provided art assets from the [1-Bit Pack by Kenny](https://kenney.nl/assets/bit-pack) to create an engaging and interesting game. 
 
 
 **Lore**:  
@@ -12,3 +12,5 @@ You were sent as part of the first colonization party in attempts to colonize th
 On approach to the planet your ship had a hard time entering the atmosphere and crash landed! 
 
 Now is your time to oversee your group and their survival...
+
+
