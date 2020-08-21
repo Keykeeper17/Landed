@@ -1,5 +1,5 @@
 # Landed
-This game is created with the game development group Spectron for [Miz Jam 1](https://itch.io/jam/miz-jam-1).<br />
+This game is created by Spectron Games for [Miz Jam 1](https://itch.io/jam/miz-jam-1).<br />
 <!-- Github uses Markdown and to add spaces use double space or <br /> , this is also an example of comments-->
 
 **Objective**:  
