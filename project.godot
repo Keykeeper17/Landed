@@ -19,6 +19,10 @@ config/name="Landed"
 run/main_scene="res://World.tscn"
 config/icon="res://Rocket.png"
 
+[autoload]
+
+global="*res://global.gd"
+
 [display]
 
 window/size/resizable=false
