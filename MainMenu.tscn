@@ -57,14 +57,14 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
 
-[node name="Options" type="Button" parent="TitleScreen/Menu/ButtonRow/Buttons"]
+[node name="Controls" type="Button" parent="TitleScreen/Menu/ButtonRow/Buttons"]
 margin_top = 100.0
 margin_right = 500.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 360, 80 )
 flat = true
 
-[node name="TextureRect" type="TextureRect" parent="TitleScreen/Menu/ButtonRow/Buttons/Options"]
+[node name="TextureRect" type="TextureRect" parent="TitleScreen/Menu/ButtonRow/Buttons/Controls"]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 4 )
@@ -112,4 +112,6 @@ stream = ExtResource( 8 )
 autoplay = true
 
 [node name="FadeIn" parent="TitleScreen" instance=ExtResource( 9 )]
+[connection signal="pressed" from="TitleScreen/Menu/ButtonRow/Buttons/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="TitleScreen/Menu/ButtonRow/Buttons/Controls" to="." method="_on_Controls_pressed"]
 [connection signal="pressed" from="TitleScreen/Menu/ButtonRow/Buttons/Exit" to="." method="_on_Exit_pressed"]
