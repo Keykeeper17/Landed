@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Main_menu_pog.wav-fd0d57922fea354f358465987b37a17c.sample"
+
+[deps]
+
+source_file="res://Main_menu_pog.wav"
+dest_files=[ "res://.import/Main_menu_pog.wav-fd0d57922fea354f358465987b37a17c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

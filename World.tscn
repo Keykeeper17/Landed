@@ -1,13 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://TileMap.gd" type="Script" id=2]
 [ext_resource path="res://Draw.gd" type="Script" id=3]
-[ext_resource path="res://Art/Container.png" type="Texture" id=4]
-[ext_resource path="res://Art/grass.png" type="Texture" id=5]
-[ext_resource path="res://Art/Rock.png" type="Texture" id=6]
-[ext_resource path="res://Art/Tree1.png" type="Texture" id=7]
-[ext_resource path="res://Unit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Unit.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
 
@@ -25,64 +21,5 @@ anchor_mode = 0
 current = true
 zoom = Vector2( 1, 0.987 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-
-[node name="Container" type="TextureRect" parent="Camera2D/CanvasLayer"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -186.0
-margin_top = 0.449669
-margin_bottom = 50.4497
-texture = ExtResource( 4 )
-expand = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="TextureRect2" type="TextureRect" parent="Camera2D/CanvasLayer"]
-margin_left = 859.805
-margin_top = 16.0
-margin_right = 875.805
-margin_bottom = 32.0
-texture = ExtResource( 5 )
-
-[node name="Grass_Label" type="Label" parent="Camera2D/CanvasLayer"]
-margin_left = 876.0
-margin_top = 16.0
-margin_right = 892.0
-margin_bottom = 32.0
-text = "x0"
-
-[node name="TextureRect3" type="TextureRect" parent="Camera2D/CanvasLayer"]
-margin_left = 912.316
-margin_top = 15.7766
-margin_right = 928.316
-margin_bottom = 31.7766
-texture = ExtResource( 6 )
-
-[node name="Rock_Label" type="Label" parent="Camera2D/CanvasLayer"]
-margin_left = 928.537
-margin_top = 15.5777
-margin_right = 944.537
-margin_bottom = 31.5777
-text = "x0"
-
-[node name="TextureRect4" type="TextureRect" parent="Camera2D/CanvasLayer"]
-margin_left = 963.302
-margin_top = 15.3883
-margin_right = 979.302
-margin_bottom = 31.3883
-texture = ExtResource( 7 )
-
-[node name="Tree_Label" type="Label" parent="Camera2D/CanvasLayer"]
-margin_left = 979.09
-margin_top = 15.3883
-margin_right = 995.09
-margin_bottom = 31.3883
-text = "x0"
-
-[node name="Unit" parent="." instance=ExtResource( 8 )]
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 119.96, 61.601 )
-
-[node name="Unit2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 277.96, 61.601 )
