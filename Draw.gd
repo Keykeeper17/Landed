@@ -18,8 +18,11 @@ func _unhandled_input(event):
 	#			print(event.position)
 			else:
 				for item in selected:
-					item.collider.target = get_global_mouse_position()
-					item.collider.selected = false
+					if(item.collider_id == 1242 or item.collider_id == 1262 or item.collider_id == 1252 or item.collider_id == 1257 or item.collider_id == 1247):
+						item.collider.target = get_global_mouse_position()
+						item.collider.selected = false
+					else:
+						pass
 				selected = []
 				
 		elif dragging:
@@ -38,10 +41,16 @@ func _unhandled_input(event):
 			query.set_shape(select_rect)
 			query.transform = Transform2D(0, (drag_end + drag_start) / 2)
 			selected = space.intersect_shape(query)
-			print(selected)
+#			print(selected)
+			
+#			print(selected.collider)
 			
 			for item in selected:
-				item.collider.selected = true
+				print("Test: ",item.collider_id)
+				if(item.collider_id == 1242 or item.collider_id == 1262 or item.collider_id == 1252 or item.collider_id == 1257 or item.collider_id == 1247):
+					item.collider.selected = true
+				else:
+					pass
 			
 			
 	if event is InputEventMouseMotion and dragging:

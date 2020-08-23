@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready() -> void:
+	VisualServer.set_default_clear_color(Color(0.39,0.22,0.24,1.0))
+
 func _on_Exit_pressed() -> void:
 	get_tree().quit()
 

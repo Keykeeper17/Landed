@@ -1,25 +1,139 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://GroundTiles.tres" type="TileSet" id=1]
-[ext_resource path="res://TileMap.gd" type="Script" id=2]
-[ext_resource path="res://Draw.gd" type="Script" id=3]
-[ext_resource path="res://Unit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World.gd" type="Script" id=1]
+[ext_resource path="res://Art/Container.png" type="Texture" id=2]
+[ext_resource path="res://Art/grass.png" type="Texture" id=3]
+[ext_resource path="res://Art/Ore.png" type="Texture" id=4]
+[ext_resource path="res://Art/Tree1.png" type="Texture" id=5]
+[ext_resource path="res://Art/Rock.png" type="Texture" id=6]
+[ext_resource path="res://GroundTiles.tres" type="TileSet" id=7]
+[ext_resource path="res://TileMap.gd" type="Script" id=8]
+[ext_resource path="res://Draw.gd" type="Script" id=9]
+[ext_resource path="res://Unit.tscn" type="PackedScene" id=10]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Container" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -369.0
+margin_top = 2.0
+margin_right = -3.0
+margin_bottom = 88.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Container"]
+margin_left = 33.0
+margin_top = 25.0
+margin_right = 65.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( -83, -47 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Grass_Label" type="Label" parent="CanvasLayer/Container/TextureRect"]
+margin_left = 30.0755
+margin_right = 70.0755
+margin_bottom = 40.0
+text = "x0"
+align = 1
+valign = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Container"]
+margin_left = 125.0
+margin_top = 25.0
+margin_right = 157.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( -83, -47 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Ore_Label" type="Label" parent="CanvasLayer/Container/TextureRect2"]
+margin_left = 30.394
+margin_right = 70.394
+margin_bottom = 40.0
+text = "x0"
+align = 1
+valign = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Container"]
+margin_left = 201.0
+margin_top = 25.0
+margin_right = 233.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( -83, -47 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Tree_Label" type="Label" parent="CanvasLayer/Container/TextureRect3"]
+margin_left = 25.0755
+margin_right = 65.0755
+margin_bottom = 40.0
+text = "x0"
+align = 1
+valign = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Container"]
+margin_left = 279.0
+margin_top = 25.0
+margin_right = 311.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( -83, -47 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Rock_Label" type="Label" parent="CanvasLayer/Container/TextureRect4"]
+margin_left = 25.0755
+margin_right = 65.0755
+margin_bottom = 40.0
+text = "x0"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Container"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -35.0
+margin_top = -18.0
+margin_right = 5.0
+margin_bottom = -4.0
+align = 1
+valign = 1
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 16, 16 )
 format = 1
-script = ExtResource( 2 )
+script = ExtResource( 8 )
 
 [node name="Draw" type="Node2D" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 9 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
-zoom = Vector2( 1, 0.987 )
+zoom = Vector2( 0.99, 0.96 )
 
-[node name="Node2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 119.96, 61.601 )
+[node name="Node2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 626.416, 154.548 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 646.904, 201.377 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 659.029, 144.931 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 674.081, 176.708 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 620.144, 183.816 )

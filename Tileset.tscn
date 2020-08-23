@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Art/grass.png" type="Texture" id=1]
 [ext_resource path="res://Art/Rock.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://Art/Tree1.png" type="Texture" id=12]
 [ext_resource path="res://Art/Tree2.png" type="Texture" id=13]
 [ext_resource path="res://Art/Tree3.png" type="Texture" id=14]
+[ext_resource path="res://Art/Rocket.png" type="Texture" id=15]
+[ext_resource path="res://Art/Ore.png" type="Texture" id=16]
 
 [node name="Node" type="Node"]
 
@@ -71,4 +73,12 @@ centered = false
 
 [node name="Tree3" type="Sprite" parent="."]
 texture = ExtResource( 14 )
+centered = false
+
+[node name="Rocket" type="Sprite" parent="."]
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Ore" type="Sprite" parent="."]
+texture = ExtResource( 16 )
 centered = false
