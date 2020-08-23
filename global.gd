@@ -1,9 +1,9 @@
 extends Node
 
-var counter1 = 0
-var counter2 = 0
-var counter3 = 0
-var counter4 = 0
+var counter1 = 0 #Grass
+var counter2 = 0 #Ore
+var counter3 = 0 #Rock
+var counter4 = 0 #Tree
 
 func _ready():
 	set_process(true)

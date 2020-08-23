@@ -46,7 +46,7 @@ func _unhandled_input(event):
 #			print(selected.collider)
 			
 			for item in selected:
-				print("Test: ",item.collider_id)
+#				print("Test: ",item.collider_id)
 				if(item.collider_id == 1242 or item.collider_id == 1262 or item.collider_id == 1252 or item.collider_id == 1257 or item.collider_id == 1247):
 					item.collider.selected = true
 				else:

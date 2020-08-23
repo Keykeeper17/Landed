@@ -7,6 +7,7 @@ export var nTime = 125
 func _ready() -> void:
 	set_process(true)
 	get_node("CanvasLayer/Container/Label").text = "Day"#"Time: "+String(dnTimer)
+	
 
 func _process(delta: float):
 	dnTimer-=.05
@@ -25,3 +26,4 @@ func _process(delta: float):
 		get_node("CanvasLayer/Container/Label").text = "Night"
 		get_node("CanvasLayer/Container/Label").add_color_override("font_color", Color(1,0.1,0,1))
 		print("Night")
+		
