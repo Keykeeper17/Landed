@@ -137,3 +137,13 @@ position = Vector2( 674.081, 176.708 )
 
 [node name="Node2D5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 620.144, 183.816 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1064.11
+margin_top = 84.5714
+margin_right = 1121.11
+margin_bottom = 104.571
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Launch"
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
