@@ -9,6 +9,22 @@ var drag_end = Vector2()
 
 var units = []
 
+var MyScript = preload("res://World.gd")
+
+onready var unitID = get_node(".").unitID
+onready var unitID2 = get_node(".").unitID2
+onready var unitID3 = get_node(".").unitID3
+onready var unitID4 = get_node(".").unitID4
+onready var unitID5 = get_node(".").unitID5
+
+func _ready():
+	print("Unit ",global.UID)
+	print("Unit2 ",unitID2)
+	print("Unit3 ",unitID3)
+	print("Unit4 ",unitID4)
+	print("Unit5 ",unitID5)
+
+
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed:
@@ -18,7 +34,7 @@ func _unhandled_input(event):
 	#			print(event.position)
 			else:
 				for item in selected:
-					if(item.collider_id == 1242 or item.collider_id == 1262 or item.collider_id == 1252 or item.collider_id == 1257 or item.collider_id == 1247):
+					if(item.collider_id == unitID):
 						item.collider.target = get_global_mouse_position()
 						item.collider.selected = false
 					else:
@@ -41,15 +57,17 @@ func _unhandled_input(event):
 			query.set_shape(select_rect)
 			query.transform = Transform2D(0, (drag_end + drag_start) / 2)
 			selected = space.intersect_shape(query)
-#			print(selected)
+#			print(selected) #prints array of queried objects
 			
 #			print(selected.collider)
 			
 			for item in selected:
-#				print("Test: ",item.collider_id)
-				if(item.collider_id == 1242 or item.collider_id == 1262 or item.collider_id == 1252 or item.collider_id == 1257 or item.collider_id == 1247):
+#				print("Test: ",item.collider_id) #prints first collider id number
+#				print("Test: ",item.keys()) # prints the keys in the dictonary
+#				print("Test: ",item.collider) #prints current selected object
+				if(item.collider_id == unitID):
 					item.collider.selected = true
-				else:
+#				else:
 					pass
 			
 			

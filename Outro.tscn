@@ -1,11 +1,15 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://FadeIn.gd" type="Script" id=1]
+[ext_resource path="res://Outro.gd" type="Script" id=1]
 [ext_resource path="res://Art/Meatball.png" type="Texture" id=2]
 [ext_resource path="res://Gamejam-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Art/IntroLore.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 38
 font_data = ExtResource( 3 )
 
 [node name="FadeIn" type="Node"]
@@ -24,9 +28,10 @@ margin_bottom = 671.599
 custom_fonts/font = SubResource( 1 )
 text = "Press any button to continue..."
 
-[node name="Lore" type="TextureRect" parent="TextureRect"]
-margin_left = 98.4791
-margin_top = 157.341
-margin_right = 1208.48
-margin_bottom = 637.341
-texture = ExtResource( 4 )
+[node name="Label2" type="Label" parent="."]
+margin_left = 451.113
+margin_top = 346.1
+margin_right = 847.113
+margin_bottom = 544.1
+custom_fonts/font = SubResource( 2 )
+text = "Thank you for playing!"

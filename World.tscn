@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Art/Container.png" type="Texture" id=2]
@@ -8,8 +8,7 @@
 [ext_resource path="res://Art/Rock.png" type="Texture" id=6]
 [ext_resource path="res://GroundTiles.tres" type="TileSet" id=7]
 [ext_resource path="res://TileMap.gd" type="Script" id=8]
-[ext_resource path="res://Draw.gd" type="Script" id=9]
-[ext_resource path="res://Unit.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Unit.tscn" type="PackedScene" id=9]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -23,6 +22,7 @@ margin_left = -369.0
 margin_top = 2.0
 margin_right = -3.0
 margin_bottom = 88.0
+mouse_filter = 2
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -116,34 +116,33 @@ format = 1
 script = ExtResource( 8 )
 
 [node name="Draw" type="Node2D" parent="."]
-script = ExtResource( 9 )
+visible = false
+
+[node name="Node2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 626.416, 154.548 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
 zoom = Vector2( 0.99, 0.96 )
 
-[node name="Node2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 626.416, 154.548 )
-
-[node name="Node2D2" parent="." instance=ExtResource( 10 )]
+[node name="Node2D2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 646.904, 201.377 )
 
-[node name="Node2D3" parent="." instance=ExtResource( 10 )]
+[node name="Node2D3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 659.029, 144.931 )
 
-[node name="Node2D4" parent="." instance=ExtResource( 10 )]
+[node name="Node2D4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 674.081, 176.708 )
 
-[node name="Node2D5" parent="." instance=ExtResource( 10 )]
+[node name="Node2D5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 620.144, 183.816 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 1064.11
-margin_top = 84.5714
-margin_right = 1121.11
-margin_bottom = 104.571
-focus_mode = 0
-enabled_focus_mode = 0
+[node name="Launch" type="Button" parent="."]
+visible = false
+margin_left = 1063.88
+margin_top = 88.3524
+margin_right = 1120.88
+margin_bottom = 108.352
 text = "Launch"
-[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="pressed" from="Launch" to="." method="_on_Launch_pressed"]

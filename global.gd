@@ -5,6 +5,12 @@ var counter2 = 0 #Ore
 var counter3 = 0 #Rock
 var counter4 = 0 #Tree
 
+var UID
+var UID2
+var UID3
+var UID4
+var UID5
+
 func _ready():
 	set_process(true)
 #	VisualServer.set_default_clear_color(Color(0.3,0.3,0.3,1.0))   #Default background color

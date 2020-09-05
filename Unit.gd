@@ -17,11 +17,15 @@ var t = Timer.new()
 
 export var gather_speed = 10
 
+var unitid = get_instance_id() # Gets object's unique instance ID.
+
 func _ready():
 	target = get_position()
 	t.set_wait_time(gather_speed)
 	t.set_one_shot(true)
 	self.add_child(t)
+#	print(unitid) # Gets object's unique instance ID.
+#	print("UNIT: ", get_instance_id()) # Gets object's unique instance ID.
 
 func _physics_process(delta):
 	velocity = position.direction_to(target)
