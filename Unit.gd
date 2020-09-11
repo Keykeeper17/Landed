@@ -19,6 +19,10 @@ export var gather_speed = 10
 
 var unitid = get_instance_id() # Gets object's unique instance ID.
 
+#Teleport Unit
+func teleport(x,y):
+	position = Vector2(x,y)
+
 func _ready():
 	target = get_position()
 	t.set_wait_time(gather_speed)

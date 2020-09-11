@@ -19,30 +19,36 @@ func _ready() -> void:
 	global.UID3 = unitID3
 	global.UID4 = unitID4
 	global.UID5 = unitID5
-	print("wUnit ",unitID)
-	print("wUnit2 ",unitID2)
-	print("wUnit3 ",unitID3)
-	print("wUnit4 ",unitID4)
-	print("wUnit5 ",unitID5)
+#	print("wUnit ",unitID)
+#	print("wUnit2 ",unitID2)
+#	print("wUnit3 ",unitID3)
+#	print("wUnit4 ",unitID4)
+#	print("wUnit5 ",unitID5)
 	get_node("Launch").visible = false
 	
 
 func _process(delta: float):
-	dnTimer-=.05
+	dnTimer-=.4
+#	print(dnTimer)
 	if (dnTimer <= 0):
 		get_node("CanvasLayer/Container/Label").text = "Day"#"Time: "+String(dnTimer)
 		VisualServer.set_default_clear_color(Color(0.39,0.22,0.24,1.0))
 		get_node("CanvasLayer/Container/Label").add_color_override("font_color", Color(1,1,1,1))
 		print("Day again")
 		dnTimer = 600
-	if(dnTimer == 350):
+	if(dnTimer <= 400):
 		get_node("CanvasLayer/Container/Label").text = "Night Coming"
 		get_node("CanvasLayer/Container/Label").add_color_override("font_color", Color(1,0.4,0,1))
 		print("Night Coming")
-	if(dnTimer == 300):
+	if(dnTimer <= 300):
 		VisualServer.set_default_clear_color(Color(0.1,0.1,0.4,1.0))
 		get_node("CanvasLayer/Container/Label").text = "Night"
 		get_node("CanvasLayer/Container/Label").add_color_override("font_color", Color(1,0.1,0,1))
+		print("Night")
+	if(dnTimer <= 100):
+		VisualServer.set_default_clear_color(Color(0.1,0.1,0.4,1.0))
+		get_node("CanvasLayer/Container/Label").text = "Day Coming"
+		get_node("CanvasLayer/Container/Label").add_color_override("font_color", Color(1,0.4,0,1))
 		print("Night")
 		
 	#Grass, Ore, Rock, Tree
@@ -73,11 +79,13 @@ func _unhandled_input(event):
 			else:
 				for item in selected:
 					if(item.collider_id == unitID or item.collider_id == unitID2 or item.collider_id == unitID3 or item.collider_id == unitID4 or item.collider_id == unitID5):
+#						print(item.collider_id)
 						item.collider.target = get_global_mouse_position()
 						item.collider.selected = false
 					else:
 						pass
 				selected = []
+				print("seleceted: ",selected)
 				
 		elif dragging:
 			dragging = false

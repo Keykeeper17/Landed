@@ -90,7 +90,7 @@ func baseSpawn():
 #12 - Tree Square
 #13 - Tree Double
 #14 - Rocket
-	var possibleFour = 2#_randomize(0,3)
+	var possibleFour = _randomize(0,3)
 #	print(possibleFour) #Debug test for random value
 #	0 = (10,9), 1 = (53,15), 2 = (39,21), 3 = (30,29)
 	if (possibleFour == 0):
